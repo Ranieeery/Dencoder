@@ -1,13 +1,29 @@
-const buttonCrip = window.document.getElementsByClassName("button--crip");
-const buttonDescrip = window.document.getElementsByClassName("button--descrip");
-let tagtest = window.document.getElementsByTagName("h2");
+const buttonCrip = document.querySelector(".button--crip");
+const buttonDescrip = document.querySelector(".button--descrip");
+let textMsg = document.getElementsByClassName("msg--text");
+let textareaInput;
 
-buttonCrip.addEventListener("click", function() {
-    text();
+const descript = ["e", "i", "a", "o", "u"];
+const cript = ["enter", "imes", "ai", "ober", "ufat"];
+
+buttonCrip.addEventListener("click", () => {
+    textareaInput = document.querySelector("#textarea").value;
+    cripText(textareaInput);
 });
 
-function text () {
-    let inputUser = window.document.getElementsByTagName("textarea");
-    tagtest().item.innerHTML = inputUser;
+buttonDescrip.addEventListener("click", () => {
+    textareaInput = document.querySelector("#textarea").value;
+    descripText(textareaInput);
+});
 
+function cripText(text) {
+    for (let i = 0; i < descript.length; i++)
+        text = text.replaceAll(descript[i], cript[i]);
+    console.log(text);
+}
+
+function descripText(text) {
+    for (let i = 0; i < cript.length; i++)
+        text = text.replaceAll(cript[i], descript[i]);
+    console.log(text);
 }

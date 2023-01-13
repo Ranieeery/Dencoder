@@ -30,11 +30,17 @@ header {
 textarea {
     width: 26.5em;
     height: 15em;
+
 }
 
 textarea:hover {
     overflow: auto;
     width: 27.5em;
+}
+
+.footer--area {
+    text-decoration: none;
+    color: #343A40
 }
 
 .msg--show {
@@ -57,7 +63,7 @@ textarea:hover {
 }
 
 .msg--button {
-    padding: 2em 0 0 13em;
+    padding: 0.6em 0 0 13em;
     display: block;
 }
 
@@ -73,6 +79,16 @@ textarea:hover {
     border: 0.15em solid #0A3871;
 }
 
+.button:hover {
+    transform: scale(110%);
+    transition: ease 0.3s;
+}
+
+.button:active {
+    transition: none;
+    transform: scale(1);
+}
+
 .button--crip {
     background: #0A3871;
     color: #FFFFFF;
@@ -82,13 +98,4 @@ textarea:hover {
 .button--descrip {
     background: #FFFFFF;
     color: #0A3871;
-}
-
-.button--crip:active {
-    font-size: 99%;
-    margin-right: 5.22em;
-}
-
-.button--descrip:active {
-    font-size: 99%;
 }
