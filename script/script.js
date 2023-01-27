@@ -12,6 +12,9 @@ const buttonCrip = document.querySelector(".button--crip");
 const buttonDescrip = document.querySelector(".button--descrip");
 const buttonCopy = document.querySelector(".button--copy");
 
+let css = document.querySelector(".input--msg");
+let css2 = document.querySelector(".msg--warn");
+
 function criptografar(stringTexto) {
   let matriz = [
     ["e", "enter"],
@@ -34,6 +37,33 @@ buttonCrip.addEventListener("click", () => {
   const textoCrip = criptografar(textareaInput.value);
   textareaMsg.value = textoCrip;
   textareaInput.value = "";
+
+  css.style.cssText =
+    "background: #FFF;" +
+    "background-image: none" +
+    "background-repeat: no-repeat;" +
+    "background-position-x: center;" +
+    "background-position-y: 5em;" +
+    "margin-top: .5rem;" +
+    "margin-left: 10rem;" +
+    "padding: 20px 20px 10px 30px;" +
+    "font-weight: bold;" +
+    "resize: none;" +
+    "border: none;" +
+    "border-radius: 32px;" +
+    "color: #0A3871;" +
+    "position: fixed;" +
+    "width: 15em;" +
+    "height: 30em;" +
+    "box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);";
+
+  css2.style.display = "none";
+
+  buttonCopy.style.cssText =
+    "position: relative;" +
+    "margin-left: 370px;" +
+    "margin-top: 690px;" +
+    "display: inline;";
 });
 
 function descriptografar(stringTexto) {
@@ -58,6 +88,33 @@ buttonDescrip.addEventListener("click", () => {
   const textoDescrip = descriptografar(textareaInput.value);
   textareaMsg.value = textoDescrip;
   textareaInput.value = "";
+
+  css.style.cssText =
+    "background: #FFF;" +
+    "background-image: none" +
+    "background-repeat: no-repeat;" +
+    "background-position-x: center;" +
+    "background-position-y: 5em;" +
+    "margin-top: .5rem;" +
+    "margin-left: 10rem;" +
+    "padding: 20px 20px 10px 30px;" +
+    "font-weight: bold;" +
+    "resize: none;" +
+    "border: none;" +
+    "border-radius: 32px;" +
+    "color: #0A3871;" +
+    "position: fixed;" +
+    "width: 15em;" +
+    "height: 30em;" +
+    "box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);";
+
+  css2.style.display = "none";
+
+  buttonCopy.style.cssText =
+    "position: relative;" +
+    "margin-left: 370px;" +
+    "margin-top: 690px;" +
+    "display: inline;";
 });
 
 buttonCopy.addEventListener("click", () => {
